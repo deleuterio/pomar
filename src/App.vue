@@ -17,10 +17,11 @@ export default {
   },
   methods: {
     initMap() {
-      const location = { lat: -34.397, lng: 150.644 };
+      const location = { lat: -19.869783649952346, lng: -43.83179461119338 };
       this.map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 8,
+        zoom: 24,
         center: location,
+        mapTypeId: google.maps.MapTypeId.SATELLITE
       });
       this.marker = new google.maps.Marker({
         position: location,
