@@ -2,7 +2,6 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-// import notionToMdPlugin from './plugins/notionToMdPlugin'
 
 // Pre build scripts
 import './scripts/map-md-files';
@@ -11,7 +10,6 @@ import './scripts/map-md-files';
 export default defineConfig({
   plugins: [
     vue(),
-    // notionToMdPlugin(),
   ],
   resolve: {
     alias: {
