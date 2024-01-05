@@ -1,7 +1,7 @@
 import fs from 'fs';
 import yaml from 'yaml';
 
-const postsPath = './content/posts';
+const postsPath = 'posts';
 const jsonPath = './src/posts.json';
 
 // Função para ler o conteúdo YAML de um arquivo
@@ -13,12 +13,12 @@ function readYamlFromFile(filePath) {
 
 // Função para percorrer os arquivos e extrair as informações YAML
 function extractYamlFromFiles() {
-    const files = fs.readdirSync(postsPath);
+    const files = fs.readdirSync(`./content/${postsPath}`);
     const posts = [];
     files.forEach((file) => {
-        const filePath = `${postsPath}/${file}/README.md`;
+        const filePath = `./content/${postsPath}/${file}/README.md`;
         const post = readYamlFromFile(filePath);
-        posts.push({ path: filePath, post });
+        posts.push({ path: `${postsPath}/${file}/README.md`, post });
     });
 
     return posts;
