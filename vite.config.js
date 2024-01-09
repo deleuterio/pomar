@@ -2,14 +2,14 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-// import mdPlugin from 'vite-plugin-markdown';
+import md from 'vite-plugin-md';
 
 // Pre build scripts
 import './scripts/map-md-files';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue({ include: [/\.vue$/, /\.md$/] }), md()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

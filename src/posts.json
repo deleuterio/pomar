@@ -1,6 +1,6 @@
 [
   {
-    "path": "posts/Abacate-1/README.md",
+    "path": "posts/Abacate-1/README",
     "post": {
       "id": {
         "prefix": "POM",
@@ -25,7 +25,7 @@
     }
   },
   {
-    "path": "posts/Jabutica-Olho-de-Boi/README.md",
+    "path": "posts/Jabutica-Olho-de-Boi/README",
     "post": {
       "id": {
         "prefix": "POM",

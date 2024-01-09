@@ -18,7 +18,7 @@ function extractYamlFromFiles() {
     files.forEach((file) => {
         const filePath = `./content/${postsPath}/${file}/README.md`;
         const post = readYamlFromFile(filePath);
-        posts.push({ path: `${postsPath}/${file}/README.md`, post });
+        posts.push({ path: `${postsPath}/${file}/README`, post });
     });
 
     return posts;

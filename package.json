@@ -11,7 +11,6 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "notion-to-md": "^3.1.1",
     "vue": "^3.3.11",
     "vue-plugin-load-script": "^2.1.1",
     "vuetify": "^3.4.9"
@@ -23,8 +22,10 @@
     "@vue/eslint-config-prettier": "^8.0.0",
     "eslint": "^8.49.0",
     "eslint-plugin-vue": "^9.17.0",
+    "markdown-it": "^14.0.0",
     "prettier": "^3.0.3",
     "vite": "^5.0.10",
+    "vite-plugin-md": "^0.21.5",
     "yaml": "^2.3.4"
   }
 }
