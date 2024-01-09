@@ -55,8 +55,7 @@ export default {
 
       // Reescrever os caminhos das imagens
       const imagePath = `/content/${path.split('/').slice(0, -1).join('/')}`;
-
-      return content.replace(/!\[(.*?)\]\((.*?)\)/g, `![$1](${imagePath}/$2)`);
+      return content.replace(/!\[(.*?)\]\((.*?)\)/g, `<img src="${imagePath}/$2" alt="$1" class="markdown-image">`)
     },
     async initMap() {
       const location = { lat: -19.869783649952346, lng: -43.83179461119338 };
@@ -95,5 +94,12 @@ export default {
 .map {
   top: 0;
   left: 0;
+}
+</style>
+
+<style scoped>
+.markdown-image {
+  width: 500px;
+  height: auto;
 }
 </style>
