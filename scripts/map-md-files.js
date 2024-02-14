@@ -13,10 +13,10 @@ function readYamlFromFile(filePath) {
 
 // Função para percorrer os arquivos e extrair as informações YAML
 function extractYamlFromFiles() {
-    const files = fs.readdirSync(`./content/${postsPath}`);
+    const files = fs.readdirSync(`./public/content/${postsPath}`);
     const posts = [];
     files.forEach((file) => {
-        const filePath = `./content/${postsPath}/${file}/README.md`;
+        const filePath = `./public/content/${postsPath}/${file}/README.md`;
         const post = readYamlFromFile(filePath);
         posts.push({ path: `${postsPath}/${file}/README`, post });
     });
